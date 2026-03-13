@@ -1,0 +1,116 @@
+/* GLOBAL WRAPPER FOR INFO & REPORTS */
+.info-container {
+    width: 100%;
+    padding: 60px 2%;
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+.info-header {
+    margin-bottom: 40px;
+}
+
+.info-header h1 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.info-header span {
+    color: #facc15;
+}
+
+/* STATS CARDS FOR REPORTS */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    padding: 30px;
+    background: #f8fafc;
+    border-radius: 16px;
+    border: 1px solid #f1f5f9;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #94a3b8;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #0f172a;
+}
+
+/* ABOUT PAGE SPECIFICS */
+.about-content {
+    max-width: 900px;
+    line-height: 1.8;
+    color: #475569;
+}
+
+.about-section {
+    margin-bottom: 50px;
+}
+
+.about-section h2 {
+    font-size: 1.5rem;
+    color: #0f172a;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.feature-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.yellow-dot { color: #facc15; }
+
+/* EXPORT BUTTON */
+.btn-export {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.btn-export:hover {
+    background: #1e293b;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .feature-list { grid-template-columns: 1fr; }
+    .info-header h1 { font-size: 1.8rem; }
+}

@@ -1,0 +1,168 @@
+/* PAYMENTS PAGE - PROFESSIONAL COMPACT STYLE */
+.pay-container {
+    width: 100%;
+    padding: 40px 2%; /* Edge-to-edge with slight breathing room */
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+.pay-header {
+    margin-bottom: 30px;
+}
+
+.pay-header h1 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #0f172a;
+    letter-spacing: -1px;
+}
+
+.pay-header span {
+    color: #facc15; /* The Signature Yellow */
+}
+
+.pay-subtitle {
+    color: #64748b;
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+/* COMPACT CONTROL BAR */
+.pay-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8fafc;
+    padding: 16px 24px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 1px solid #f1f5f9;
+}
+
+.controls-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon-yellow {
+    color: #facc15;
+}
+
+.pay-select {
+    padding: 8px 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    outline: none;
+    background: #ffffff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.pay-select:focus {
+    border-color: #facc15;
+}
+
+.year-input {
+    width: 90px;
+}
+
+.payroll-info {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #94a3b8;
+}
+
+/* DATA TABLE CUSTOMS */
+.salary-table-card {
+    width: 100%;
+    border: 1px solid #f1f5f9;
+    border-radius: 12px;
+    overflow-x: auto; /* For mobile responsiveness */
+}
+
+.emp-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.emp-table th {
+    background: #f1f5f9;
+    padding: 14px 20px;
+    text-align: left;
+    font-size: 0.75rem;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.emp-table td {
+    padding: 12px 20px;
+    border-bottom: 1px solid #f8fafc;
+    font-size: 0.85rem;
+    color: #334155;
+}
+
+.emp-name-cell {
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.emp-amount-cell {
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.emp-period-cell {
+    color: #94a3b8;
+    font-size: 0.8rem;
+}
+
+/* EXECUTE BUTTON */
+.btn-execute {
+    background: #facc15;
+    color: #0f172a;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 0.75rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.2s;
+}
+
+.btn-execute:hover {
+    background: #eab308;
+    transform: translateY(-1px);
+}
+
+/* PAID STATUS BADGE */
+.status-paid {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #10b981;
+    background: #f0fdf4;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 0.75rem;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .pay-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+    .payroll-info {
+        text-align: center;
+    }
+}

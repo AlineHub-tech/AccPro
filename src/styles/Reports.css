@@ -1,0 +1,80 @@
+.report-container {
+    padding: 60px 8%;
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+.report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.report-header h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.report-header span {
+    color: #facc15;
+}
+
+/* STATS CARDS */
+.report-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.stat-card {
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 24px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.stat-card h4 {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.stat-card .amount {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #0f172a;
+}
+
+/* EXPORT BUTTON */
+.btn-pdf {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 12px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: 0.3s;
+}
+
+.btn-pdf:hover {
+    background: #1e293b;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-pdf .icon-yellow {
+    color: #facc15;
+}
+
+@media (max-width: 768px) {
+    .report-header { flex-direction: column; align-items: flex-start; gap: 20px; }
+}

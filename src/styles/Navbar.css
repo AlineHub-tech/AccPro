@@ -1,0 +1,116 @@
+.nex-navbar {
+  width: 100%;
+  height: 80px;
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+}
+
+.nav-content {
+  width: 100%;
+  padding: 0 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.nex-logo {
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-decoration: none;
+  color: #0f172a;
+  letter-spacing: -1px;
+}
+
+.yellow-dot { color: #facc15; }
+
+/* NAV LINKS (DESKTOP) */
+.nex-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nex-nav-item {
+  text-decoration: none;
+  color: #475569;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s ease;
+}
+
+.nex-nav-item:hover, .nex-nav-item.active {
+  color: #facc15;
+}
+
+/* PROFILE BUTTON */
+.nex-btn-profile {
+  background: #facc15;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s ease;
+}
+
+.nex-btn-profile:hover {
+  background: #eab308;
+  transform: translateY(-2px);
+}
+
+.nex-mobile-icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* TABLET RESPONSIVE (1024px and below) */
+@media (max-width: 1024px) {
+  .nex-nav-links { gap: 15px; }
+  .nex-nav-item { font-size: 0.85rem; }
+}
+
+/* MOBILE RESPONSIVE (768px and below) */
+@media (max-width: 768px) {
+  .nex-mobile-icon { display: block; }
+
+  .nex-nav-links {
+    position: fixed;
+    top: 80px;
+    left: -100%; /* Inihishe */
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: #ffffff;
+    flex-direction: column;
+    padding: 50px 0;
+    gap: 35px;
+    transition: 0.4s ease-in-out;
+    border-top: 1px solid #f1f5f9;
+  }
+
+  .nex-nav-links.mobile-active {
+    left: 0; /* Ihita iza */
+  }
+
+  .nex-nav-item {
+    font-size: 1.2rem;
+    width: 80%;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .profile-btn-link { width: 80%; }
+  .nex-btn-profile { width: 100%; justify-content: center; padding: 15px; }
+}

@@ -1,0 +1,192 @@
+/* CONTAINER & HEADER */
+.emp-container {
+    width: 100%;
+    padding: 40px 2%;
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+.emp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.emp-header h1 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.emp-header span {
+    color: #facc15;
+}
+
+.emp-count {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #94a3b8;
+}
+
+/* COMPACT FORM CARD */
+.emp-form-card {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #f1f5f9;
+    margin-bottom: 30px;
+}
+
+.emp-form {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.input-group label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.input-group input {
+    padding: 10px 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    outline: none;
+    font-size: 0.9rem;
+    transition: 0.2s ease;
+}
+
+.input-group input:focus {
+    border-color: #facc15;
+    background: #ffffff;
+}
+
+/* BUTTONS */
+.btn-save {
+    background: #facc15;
+    color: #0f172a;
+    padding: 10px 22px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    transition: 0.2s;
+}
+
+.btn-save:hover {
+    background: #eab308;
+    transform: translateY(-1px);
+}
+
+.btn-icon {
+    margin-right: 8px;
+}
+
+/* TABLE STYLING */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #f1f5f9;
+    border-radius: 10px;
+}
+
+.emp-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+}
+
+.emp-table th {
+    background: #f1f5f9;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 0.75rem;
+    color: #64748b;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.emp-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #f8fafc;
+    font-size: 0.85rem;
+    color: #334155;
+}
+
+.emp-table tr:hover {
+    background-color: #fefce8;
+}
+
+/* HELPERS */
+.text-center {
+    text-align: center !important;
+}
+
+.action-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.font-bold {
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.font-bolder {
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.btn-delete-icon {
+    background: none;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    padding: 5px;
+    transition: 0.2s;
+}
+
+.btn-delete-icon:hover {
+    transform: scale(1.15);
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .emp-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .emp-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .input-group {
+        width: 100%;
+    }
+
+    .btn-save {
+        width: 100%;
+        justify-content: center;
+    }
+}
