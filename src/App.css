@@ -1,0 +1,92 @@
+/* 1. RESET EVERYTHING: Kill all default gaps */
+* {
+    margin: 0 !important;
+    padding: 0;
+    box-sizing: border-box !important;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden; /* Stops horizontal scrolling */
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 2. THE MAIN WRAPPER */
+.app-main-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 3. FULL-WIDTH CONTAINERS (No more gaps on sides) */
+.landing-body, 
+.lp-hero, 
+.lp-section, 
+.emp-container, 
+.salary-container, 
+.pay-container, 
+.report-container,
+.info-wrapper,
+.nex-navbar,
+.nex-footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 4% !important; /* Professional margin for desktop */
+    padding-right: 4% !important;
+    margin: 0 !important;
+}
+
+/* 4. RESPONSIVE GRID SYSTEM (Desktop, Tablet, Mobile) */
+
+/* Desktop & Tablet */
+@media (min-width: 768px) {
+    .lp-grid, .grid-3, .nex-grid, .emp-form, .pay-controls {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+    }
+}
+
+/* Mobile (Small Screens) */
+@media (max-width: 767px) {
+    /* Set side padding smaller for mobile */
+    .landing-body, .lp-hero, .lp-section, .emp-container, 
+    .salary-container, .pay-container, .report-container,
+    .nex-navbar, .nex-footer {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    /* Stack items vertically on mobile */
+    .lp-grid, .grid-3, .nex-grid, .emp-form, .pay-controls {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    /* Make Tables Scrollable so they don't break the screen */
+    .table-responsive, .salary-table-card, .table-wrapper {
+        width: 100% !important;
+        overflow-x: auto !important;
+        display: block !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Shrink huge text on mobile */
+    .lp-h1 {
+        font-size: 2.2rem !important;
+        line-height: 1.2 !important;
+    }
+}
+
+/* 5. NAVBAR WIDTH FIX */
+.nex-navbar {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: 80px;
+}
