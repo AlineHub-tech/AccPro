@@ -1,0 +1,164 @@
+/* 1. MAIN CONTAINER & SPACING */
+.info-container {
+    padding: 120px 8% 60px; /* Padding-top nini kuko navbar ari fixed */
+    background-color: #fcfcfd;
+    min-height: 100vh;
+}
+
+/* 2. HEADER & EXPORT BUTTON */
+.report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.report-header h1 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #0f172a;
+    letter-spacing: -1.5px;
+}
+
+.report-header h1 span { color: #facc15; }
+
+.btn-export {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 14px;
+    border: none;
+    font-weight: 800;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.1);
+}
+
+.btn-export:hover {
+    background: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.2);
+}
+
+/* 3. STATS GRID - Enterprise Look */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.stat-card {
+    padding: 40px 30px;
+    background: #ffffff;
+    border-radius: 28px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+    transition: 0.4s;
+    position: relative;
+}
+
+.stat-card:hover {
+    transform: translateY(-8px);
+    border-color: #facc15;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+}
+
+.stat-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #94a3b8;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.stat-value {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #0f172a;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.stat-value small {
+    font-size: 1rem;
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+/* 4. PREMIUM TABLE DESIGN */
+.table-responsive {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 30px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    overflow-x: auto;
+}
+
+.emp-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Intera hagati ya rows */
+}
+
+.emp-table th {
+    padding: 15px 25px;
+    text-align: left;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.emp-table tbody tr {
+    background-color: #ffffff;
+    transition: 0.3s;
+}
+
+.emp-table td {
+    padding: 20px 25px;
+    border-top: 1px solid #f8fafc;
+    border-bottom: 1px solid #f8fafc;
+    color: #334155;
+    font-size: 1rem;
+}
+
+/* Ububasha bwa row ya mbere n'iya nyuma */
+.emp-table td:first-child { border-left: 1px solid #f8fafc; border-radius: 15px 0 0 15px; }
+.emp-table td:last-child { border-right: 1px solid #f8fafc; border-radius: 0 15px 15px 0; }
+
+.emp-table tbody tr:hover td {
+    background-color: #fefce8; /* Hover yoroheje y'umuhondo */
+    border-color: #fef08a;
+    color: #000;
+}
+
+.font-bold { font-weight: 700; color: #0f172a; }
+.font-bolder { font-weight: 900; color: #0f172a; font-size: 1.1rem; }
+
+/* 5. RESPONSIVE UTILS */
+@media (max-width: 900px) {
+    .report-header { flex-direction: column; align-items: flex-start; }
+    .btn-export { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 600px) {
+    .info-container { padding: 100px 5% 40px; }
+    .stat-value { font-size: 1.8rem; }
+}
+
+/* Utility classes yashyizwe muri JS */
+.yellow-dot { color: #facc15; }
