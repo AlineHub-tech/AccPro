@@ -10,9 +10,8 @@
 ---
 
 ## 📸 Screenshots
-<img width="1350" height="633" alt="a1" src="https://github.com/user-attachments/assets/21635ea7-50e8-4772-bc6c-3a77a952a83c" />
-<img width="1349" height="631" alt="a2" src="https://github.com/user-attachments/assets/38bdf3a4-6cd7-4b02-9088-99071a5aa264" />
 
+---
 | Landing Page | Employee Management |
 | :---: | :---: |
 | ![Landing](https://placeholder.com) | ![Employees](https://placeholder.com) |
