@@ -11,7 +11,7 @@
 
 ## 📸 Screenshots
 
----;
+---
 | Landing Page | Employee Management |
 | :---: | :---: |
 | ![Landing](https://placeholder.com) | ![Employees](https://placeholder.com) |
