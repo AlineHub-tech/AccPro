@@ -1,107 +1,107 @@
-/* 1. BASE SETUP & RESET */
+/* 1. SETUP & FONTS */
 @import url('https://googleapis.com');
 
 :root {
-  --yellow: #facc15;
+  --yellow: #facc15;         /* Icyicaro cyawe cy'umuhondo */
   --yellow-dark: #ca8a04;
-  --dark: #0f172a;
+  --dark: #0f172a;           /* Umukara uvanze n'ubururu bwijimye */
   --slate: #1e293b;
-  --muted: #64748b;
+  --muted: #64748b;          /* Imyandiko yoroheje */
+  --bg-light: #fdfdfb;       /* White ivanze n'umuhondo muke cyane */
   --border: #e2e8f0;
-  --bg-light: #f8fafc;
-  --radius: 12px;
+  --radius: 20px;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition: all 0.3s ease;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   color: var(--slate);
-  line-height: 1.5;
-  overflow-x: hidden; /* Prevents any horizontal scrolling */
-  width: 100%;
+  background-color: var(--white);
+  line-height: 1.6;
 }
 
 /* 2. LAYOUT HELPERS */
 .lp-section-container {
-  max-width: 1100px;
+  max-width: 1140px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
 .lp-section {
-  padding: 60px 0;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 40px;
+  padding: 100px 0;
 }
 
 /* 3. HERO SECTION */
 .lp-hero {
-  padding: 80px 0 40px;
+  padding: 120px 0 80px;
   text-align: center;
-  background: radial-gradient(circle at top right, #fefce8, transparent 45%);
+  background: radial-gradient(circle at top right, #fefce8, transparent 50%);
 }
 
 .lp-badge {
   background: #fef9c3;
   color: #854d0e;
-  padding: 6px 14px;
+  padding: 10px 20px;
   border-radius: 100px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  margin-bottom: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 30px;
   display: inline-block;
+  border: 1px solid #fef08a;
 }
 
 .lp-h1 {
-  font-size: clamp(2rem, 6vw, 3.2rem);
+  font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 800;
+  color: var(--dark);
   line-height: 1.1;
-  margin-bottom: 20px;
-  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  letter-spacing: -0.03em;
 }
 
 .lp-h1 span {
   color: var(--yellow-dark);
+  text-decoration: underline decoration-yellow-400 6px;
 }
 
 .lp-p {
-  max-width: 600px;
-  margin: 0 auto 30px;
-  font-size: 1rem;
+  max-width: 650px;
+  margin: 0 auto 40px;
+  font-size: 1.15rem;
   color: var(--muted);
 }
 
 .lp-btn-primary {
   background: var(--yellow);
-  color: #000;
+  color: #1a1a1a;
   border: none;
-  padding: 14px 32px;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 1rem;
+  padding: 18px 40px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 1.1rem;
   cursor: pointer;
-  transition: all 0.2s ease;
+  box-shadow: 0 10px 15px -3px rgba(250, 204, 21, 0.3);
 }
 
 .lp-btn-primary:hover {
-  transform: translateY(-2px);
-  filter: brightness(0.95);
+  transform: translateY(-4px);
+  background: var(--yellow-dark);
+  color: white;
+  box-shadow: 0 20px 25px -5px rgba(250, 204, 21, 0.4);
 }
 
-/* 4. TRUST BAR & ICONS */
+/* 4. TRUST BAR */
 .trust-bar {
   display: flex;
   justify-content: center;
-  gap: 25px;
-  padding: 30px 20px;
+  gap: 40px;
+  padding: 40px 20px;
   background: var(--bg-light);
   border-top: 1px solid var(--border);
   flex-wrap: wrap;
@@ -110,133 +110,136 @@ body {
 .trust-item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.75rem;
-  font-weight: 600;
+  gap: 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
   color: var(--muted);
   text-transform: uppercase;
-}
-
-.lp-icon-sm {
-  width: 18px;
-  height: 18px;
-}
-
-.lp-star-fill {
-  fill: currentColor;
+  letter-spacing: 1px;
 }
 
 /* 5. SERVICES GRID */
 .lp-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
 }
 
 .lp-card {
-  padding: 30px;
+  padding: 50px 40px;
   background: white;
-  border: 1px solid var(--border);
+  border: 1px solid #f1f5f9;
   border-radius: var(--radius);
-  transition: border-color 0.3s;
+  position: relative;
 }
 
-.lp-card:hover { border-color: var(--yellow); }
+.lp-card:hover {
+  border-color: var(--yellow);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-8px);
+}
 
 .lp-icon-box {
   color: var(--yellow-dark);
-  margin-bottom: 15px;
-}
-
-.lp-icon-box svg {
-  width: 32px;
-  height: 32px;
+  margin-bottom: 25px;
+  background: #fefce8;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
 }
 
 .lp-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
   font-weight: 700;
+  color: var(--dark);
 }
 
-/* 6. INFO/WHY CHOOSE US SECTION */
+/* 6. INFO SECTION (Dark Mode Contrast) */
 .lp-info-bg {
-  /* background: var(--dark); */
-  border-radius: 20px;
-  padding: 40px;
-  color: rgb(0, 0, 0);
+  background: var(--dark);
+  border-radius: 35px;
+  padding: 80px 60px;
+  color: white;
+  margin: 40px 0;
 }
 
 .info-flex-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
   align-items: center;
 }
 
 .lp-h2-white {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
-  margin-bottom: 25px;
-}
-
-.check-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  margin-bottom: 30px;
 }
 
 .check-item {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  font-size: 0.95rem;
+  gap: 15px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
 }
 
 .lp-check-icon {
-  width: 20px;
-  height: 20px;
+  color: var(--yellow);
   flex-shrink: 0;
 }
 
 .stat-card {
-  background: rgba(194, 194, 194, 0.863);
-  padding: 30px;
-  border-radius: 16px;
-  color: var(--dark);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 50px 40px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
 }
 
 .stat-number {
-  color: var(--yellow-dark);
-  font-size: 2.8rem;
+  font-size: 4.5rem;
   font-weight: 800;
+  color: var(--yellow);
+  margin-bottom: 10px;
+  display: block;
 }
 
 /* 7. FAQ SECTION */
 .faq-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
 
+.faq-item {
+  padding: 35px;
+  background: #f8fafc;
+  border-radius: 20px;
+}
+
+.faq-item h4 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 15px;
+}
+
 .lp-faq-icon {
-  width: 18px;
-  height: 18px;
   color: var(--yellow-dark);
-  flex-shrink: 0;
 }
 
-.faq-item p {
-  color: var(--muted);
-  font-size: 0.9rem;
-  margin-top: 8px;
-}
-
-/* 8. MOBILE OPTIMIZATION */
-@media (max-width: 768px) {
-  .lp-section { padding: 40px 0; }
-  .lp-info-bg { padding: 30px 20px; }
-  .stat-card { padding: 20px; }
-  .lp-h1 { font-size: 2.2rem; }
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .info-flex-grid { grid-template-columns: 1fr; }
+  .lp-h1 { font-size: 2.5rem; }
+  .lp-info-bg { padding: 40px 25px; }
 }
