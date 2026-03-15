@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BarChart3, Download, TrendingUp, Users, FileText } from 'lucide-react';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
-import '../styles/InfoPages.css';
+import '../styles/Report.css';
 
 const Reports = () => {
     const [payments, setPayments] = useState([]);
