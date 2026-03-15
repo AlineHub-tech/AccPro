@@ -11,7 +11,7 @@ const AboutUs = () => {
         <div className="info-container">
             {/* 1. HERO HEADER */}
             <div className="info-header">
-                <div className="info-badge">EST. 2024 • RWANDA</div>
+                <div className="info-badge">EST. 2026 • RWANDA</div>
                 <h1>Empowering Rwandan <span>Accountants.</span></h1>
                 <p>AccPro is more than just a tool; it's a financial engine built to eliminate manual errors and ensure 100% tax compliance for local firms.</p>
             </div>
