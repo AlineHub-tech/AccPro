@@ -1,44 +1,52 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
-// --- IMPORT IBIKORESHO (COMPONENTS) ---
+// --- COMPONENTS ---
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
-// --- IMPORT AMA-PAJI (PAGES) ---
+// --- PAGES ---
 import LandingPage from './pages/LandingPage';
 import Employees from './pages/Employees';
 import SalaryPage from './pages/SalaryPage';
 import Payments from './pages/Payments';
 import Reports from './pages/Reports';
 import AboutUs from './pages/AboutUs';
+import Login from './pages/Login';
 
-// --- IMPORT CSS ZA RUSANGE ---
 import './App.css'; 
+
+// --- PROTECTED ROUTE LOGIC ---
+// Iyi niyo moteri ireba niba Admin yinjiye. Niba atarinjira, imwohereza kuri Login.
+const ProtectedRoute = ({ children }) => {
+  const isAdmin = localStorage.getItem('isAdmin') === 'true';
+  return isAdmin ? children : <Navigate to="/login" />;
+};
 
 function App() {
   return (
     <Router>
       <div className="app-main-wrapper">
-        
-        {/* Navbar igaragara kuri paji zose */}
         <Navbar />
 
-        {/* AHA NIHO PAJI ZIHINDURANYA (ROUTING) */}
         <main className="content-viewport">
           <Routes>
+            {/* 1. PAJI ZIFUNGUYE (Buri muntu wese azireba) */}
             <Route path="/" element={<LandingPage />} />
-            <Route path="/employees" element={<Employees />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/salary" element={<SalaryPage />} />
             <Route path="/payments" element={<Payments />} />
             <Route path="/reports" element={<Reports />} />
-            <Route path="/about" element={<AboutUs />} />
+            <Route path="/employees" element={
+              <ProtectedRoute>
+                <Employees />
+              </ProtectedRoute>
+            } />
           </Routes>
         </main>
 
-        {/* Footer igaragara hasi kuri paji zose */}
         <Footer />
-        
       </div>
     </Router>
   );
