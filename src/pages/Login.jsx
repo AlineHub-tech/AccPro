@@ -47,8 +47,7 @@ const Login = () => {
             <input 
               type="email" 
               className="login-input" 
-              placeholder="admin@byteflow.rw"
-              value={email}
+               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required 
             />
@@ -59,7 +58,6 @@ const Login = () => {
             <input 
               type="password" 
               className="login-input" 
-              placeholder="••••••••"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required 
