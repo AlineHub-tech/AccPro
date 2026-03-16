@@ -1,0 +1,95 @@
+.login-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8fafc; /* Umweru ukeye cyane */
+    padding: 20px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    padding: 50px 40px;
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05); /* Igicucu cyoroheje */
+    border: 1px solid #f1f5f9;
+}
+
+.login-logo {
+    width: 150px;
+    margin-bottom: 25px;
+}
+
+.login-header h2 {
+    color: #0f172a;
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+.login-header p {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 35px;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #0f172a;
+    font-size: 0.8rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.login-input {
+    width: 100%;
+    padding: 14px;
+    background: #ffffff;
+    border: 2px solid #f1f5f9;
+    border-radius: 12px;
+    color: #0f172a;
+    outline: none;
+    transition: 0.3s;
+}
+
+.login-input:focus {
+    border-color: #facc15; /* Yellow key color */
+    box-shadow: 0 0 10px rgba(250, 204, 21, 0.1);
+}
+
+.btn-login {
+    width: 100%;
+    padding: 16px;
+    background-color: #facc15; /* Yellow Button */
+    color: #000000;
+    border: none;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn-login:hover {
+    background-color: #eab308;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(250, 204, 21, 0.2);
+}
+
+.login-footer-text {
+    margin-top: 30px;
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
