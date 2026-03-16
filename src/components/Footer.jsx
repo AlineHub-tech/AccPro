@@ -62,7 +62,7 @@ const Footer = () => {
               </div>
               <div className="contact-item">
                 <div className="icon-bg"><Phone size={18} /></div>
-                <span>+250 780 000 000</span>
+                <span>+250 726 112 930</span>
               </div>
               <div className="contact-item">
                 <div className="icon-bg"><Mail size={18} /></div>
